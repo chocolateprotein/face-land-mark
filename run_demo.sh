@@ -1,5 +1,5 @@
 # image
-python lib/demo.py experiments/WFLW/pip_32_16_60_r18_l2_l1_10_1_nb10.py images/1.jpg
+python lib/demo_video.py experiments/WFLW/pip_32_16_60_r18_l2_l1_10_1_nb10.py camera
 #python lib/demo.py experiments/data_300W_CELEBA/pip_32_16_60_r18_l2_l1_10_1_nb10_wcc.py images/2.jpg
 
 # video 
@@ -9,3 +9,6 @@ python lib/demo.py experiments/WFLW/pip_32_16_60_r18_l2_l1_10_1_nb10.py images/1
 # camera 
 #python lib/demo_video.py experiments/WFLW/pip_32_16_60_r18_l2_l1_10_1_nb10.py camera
 
+#탈출키
+if cv2.waitKey(1) & 0xFF == ord('q'):
+        break

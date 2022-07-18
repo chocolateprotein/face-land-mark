@@ -39,6 +39,9 @@ cfg = Config()
 cfg.experiment_name = experiment_name
 cfg.data_name = data_name
 
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
 save_dir = os.path.join('./snapshots', cfg.data_name, cfg.experiment_name)
 
 meanface_indices, reverse_index1, reverse_index2, max_len = get_meanface(os.path.join('data', cfg.data_name, 'meanface.txt'), cfg.num_nb)
